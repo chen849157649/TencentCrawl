@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索结果</title>
+</head>
+<body>
+搜索的关键字:{{ query }}<br>
+当前页的Page对象: {{ page }}<br>
+遍历page对象得到的SearchResult对象：<br>
+{% for item in page %}
+    {{ item }}<br>
+{% endfor %}
+当前页的Page对象: {{ page }}<br>
+遍历page对象后使用object属性得到商品对象：<br>
+{% for item in page %}
+    {{ item.object }}<br>
+{% endfor %}
+分页后的paginator对象：<br>
+{{ paginator }}<br>
+{{ paginator.num_pages }}<br>
+{{ paginator.page_range }}<br>
+</body>
+</html>
